@@ -59,6 +59,7 @@ public class WallmartSearchTest {
         //9- Kac sonuc bulundugunu yaziniz
         WebElement sonucYazisi=driver.findElement(By.className("result-summary-container"));
         System.out.println(sonucYazisi.getText());
+        driver.navigate().back();
     }
     @AfterClass
     public static void tearDown(){
