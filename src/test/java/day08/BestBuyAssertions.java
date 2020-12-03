@@ -42,23 +42,24 @@ public class BestBuyAssertions {
 
     }
     @Test
-    public void titleIcerik(){
+    public void titleTest(){
         //titleTest => Sayfa başlığının “Rest” içermediğini(contains) test edin
         String arananKelime="Rest";
         String actualTitle=driver.getTitle();
         Assert.assertFalse(actualTitle.contains(arananKelime));
     }
     @Test
-    public void logoGoruntulenme(){
+    public void logoTest(){
         //logoTest => BestBuy logosunun görüntülendigini test edin
         WebElement logo=driver.findElement(By.xpath("//img[@src='https://www.bestbuy.com/~assets/bby/_com/header-footer/images/bby_logo-a7e90594729ed2e119331378def6c97e.png'][1]"));
         Assert.assertTrue(logo.isDisplayed());
     }
 
     @Test
-    public void fransizcaLinkG(){
-        WebElement fLink=driver.findElement(By.xpath("//button[@lang='fr']"));
-        Assert.assertTrue(fLink.isDisplayed());
+    public void fransizcaLinkTest(){
+        //FrancaisLinkTest => Fransizca Linkin görüntülendiğini test edin
+        WebElement fransizcaLinki=driver.findElement(By.xpath("//button[@lang='fr']"));
+        Assert.assertTrue(fransizcaLinki.isDisplayed());
 
 
     }
